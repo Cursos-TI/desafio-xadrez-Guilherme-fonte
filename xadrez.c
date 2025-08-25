@@ -45,7 +45,7 @@ int main() {
         movimento_rainha++;
     } while(movimento_rainha <= movimentos_rainha);
     
-    printf("\n=== FIM DA SIMULACAO ===\n");
+    printf("\n=== FIM ===\n");
     
     return 0;
 }
