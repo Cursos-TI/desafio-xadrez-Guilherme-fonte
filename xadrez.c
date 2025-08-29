@@ -19,7 +19,6 @@ int main() {
     
     // Usando estrutura for para o bispo
     for(int i = 1; i <= movimentos_bispo; i++) {
-        printf("Movimento %d: ", i);
         printf("%s + %s\n", cima, direita);
     }
     printf("\n");
@@ -30,7 +29,7 @@ int main() {
     // Usando estrutura while para a torre
     int movimento_torre = 1;
     while(movimento_torre <= movimentos_torre) {
-        printf("Movimento %d: %s\n", movimento_torre, direita);
+        printf("%s\n", direita);
         movimento_torre++;
     }
     printf("\n");
@@ -41,9 +40,29 @@ int main() {
     // Usando estrutura do-while para a rainha
     int movimento_rainha = 1;
     do {
-        printf("Movimento %d: %s\n", movimento_rainha, esquerda);
+        printf("%s\n", esquerda);
         movimento_rainha++;
     } while(movimento_rainha <= movimentos_rainha);
+    
+    printf("\n");
+    
+    // Movimentação do Cavalo - 2 casas pra cima e 1 casa pra direita (em L)
+    printf("Movimentacao do Cavalo (2 casas pra cima e 1 casa pra direita):\n");
+    
+    // Usando estrutura while para as 2 casas pra cima
+    int movimento_cavalo_cima = 1;
+    while(movimento_cavalo_cima <= 2) {
+        printf("%s\n", cima);
+        
+        // Usando estrutura for para a 1 casa pra direita (apenas no segundo movimento)
+        if(movimento_cavalo_cima == 2) {
+            for(int movimento_cavalo_direita = 1; movimento_cavalo_direita <= 1; movimento_cavalo_direita++) {
+                printf("%s\n", direita);
+            }
+        }
+        
+        movimento_cavalo_cima++;
+    }
     
     printf("\n=== FIM ===\n");
     
